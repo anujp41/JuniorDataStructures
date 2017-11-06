@@ -41,7 +41,6 @@ describe('A linked list', function() {
 
   it('if a single node is added to head, it should be set to head and tail', function() {
     linkedList.addToHead('first');
-    expect(linkedList.head.value).toBe('first');
     expect(linkedList.head.next).toBeFalsy();
     expect(linkedList.head.previous).toBeFalsy();
     expect(linkedList.head).toBe(linkedList.tail);
@@ -105,6 +104,7 @@ describe('A linked list', function() {
     linkedList.addToTail('three');
     linkedList.addToTail('four');
     linkedList.addToTail('one');
+    console.log('here')
     expect(linkedList.search('two')).toBe('two');
     expect(linkedList.search('sdd')).toBe(null);
     expect(linkedList.search('one')).toBe('one');
